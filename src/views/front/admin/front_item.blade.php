@@ -5,7 +5,7 @@
         <tr>
             <td style='width:5%'>{{ trans('front::front.order') }}</td>
             <th style='width:10%'></th>
-            <th style='width:50%'>Tên trang</th>
+            <th style='width:50%'>Tên Front</th>
             <th style='width:20%'>{{ trans('front::front.operations') }}</th>
         </tr>
     </thead>

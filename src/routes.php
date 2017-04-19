@@ -5,6 +5,16 @@ use Illuminate\Session\TokenMismatchException;
 /**
  * FRONT
  */
+Route::get('front/gioithieu', [
+    'as' => 'gioi_thieu',
+    'uses' => 'Foostart\Front\Controllers\Front\FrontFrontController@index'
+]);
+
+Route::get('front/tintuc', [
+    'as' => 'tin_tuc',
+    'uses' => 'Foostart\Front\Controllers\Front\FrontFrontController@index1'
+]);
+
 Route::get('front', [
     'as' => 'front',
     'uses' => 'Foostart\Front\Controllers\Front\FrontFrontController@index'

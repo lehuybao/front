@@ -1,6 +1,6 @@
 <?php
 
-namespace Foostart\Front\Controllers\Admin;
+namespace Foostart\Front\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,7 +26,20 @@ class FrontFrontController extends Controller
             'request' => $request,
             'fronts' => $fronts
         );
-        return view('front::front.index', $this->data);
+        return view('front::front.front.index', $this->data);
+        
+    }
+     public function index1(Request $request)
+    {
+
+        $obj_front = new Fronts();
+        $fronts = $obj_front->get_fronts();
+        $this->data = array(
+            'request' => $request,
+            'fronts' => $fronts
+        );
+        return view('front::front.front.index1', $this->data);
+        
     }
 
 }
